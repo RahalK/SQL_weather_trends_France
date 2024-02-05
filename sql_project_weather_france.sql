@@ -230,8 +230,8 @@ GROUP BY coordinates;
 -- Section 13: Daily average temperature
 -- Calculate daily average temperature for each day
 SELECT 
-	CONVERT(DATE, date_and_time) AS extracted_date,
-	ROUND(AVG(temperature), 2) AS avg_temperature
+    CONVERT(DATE, date_and_time) AS extracted_date,
+    ROUND(AVG(temperature), 2) AS avg_temperature
 FROM Portfolio_project..temperature_france tf 
 GROUP BY CONVERT(DATE, date_and_time)
 ORDER BY extracted_date;
@@ -253,9 +253,9 @@ FROM Portfolio_project..temperature_france tf;
 -- Section 15: Top 1 percent of maximum temperature
 -- Identify the top 1 percent of geographic coordinates with the highest maximum temperature within a specific date range
 SELECT TOP 1 PERCENT 
-	tf.coordinates,  
-	wf.city "corresponding city",
-	MAX(tf.temperature) AS max_temperature
+    tf.coordinates,  
+    wf.city "corresponding city",
+    MAX(tf.temperature) AS max_temperature
 FROM Portfolio_project..temperature_france tf
 JOIN Portfolio_project..weather_france wf
 	ON tf.coordinates = wf.coordinates 
@@ -346,10 +346,10 @@ FROM Portfolio_project..weather_france wf;
 -- Section 23: Minimum temperature, wind speed, and UV index
 -- Identify the minimum temperature, minimum wind speed, and UV index for each unique combination of coordinates and UV index
 SELECT 
-	wf.coordinates,  
-	wf.uv_index,
-	MIN(tf.min_temperature) AS global_min_temperature, 
-	MIN(wf.wind_speed) as min_wind_speed	
+    wf.coordinates,  
+    wf.uv_index,
+    MIN(tf.min_temperature) AS global_min_temperature, 
+    MIN(wf.wind_speed) as min_wind_speed	
 FROM Portfolio_project..weather_france wf
 JOIN Portfolio_project..temperature_france tf 
 	ON tf.date_and_time = wf.date_and_time
