@@ -182,7 +182,7 @@ FROM Portfolio_project..temperature_france;
 -- average temperature for the given day
 SELECT 
     coordinates,
-	FORMAT(date_and_time, 'yyyy-MM-dd HH:mm') date_and_time,
+    FORMAT(date_and_time, 'yyyy-MM-dd HH:mm') date_and_time,
     temperature,
     LAG(temperature, 3) OVER (PARTITION BY coordinates ORDER BY date_and_time) AS three_prev_temperature
 FROM Portfolio_project..temperature_france
@@ -194,7 +194,7 @@ WHERE temperature > (
 -- Analyse next temperature trends over time based on the uv_index
 SELECT
     uv_index,
-	FORMAT(date_and_time, 'yyyy-MM-dd HH:mm') date_and_time,
+    FORMAT(date_and_time, 'yyyy-MM-dd HH:mm') date_and_time,
     LEAD(wind_speed) OVER (PARTITION BY uv_index ORDER BY date_and_time DESC) AS next_wind_speed
 FROM Portfolio_project..weather_france;
 
@@ -202,12 +202,12 @@ FROM Portfolio_project..weather_france;
 -- Section 11: Aggregated weather statistics
 -- Calculate aggregated weather statistics for each day and each city
 SELECT 
-	DAY(tf.date_and_time) AS day,
-	wf.city,
+    DAY(tf.date_and_time) AS day,
+    wf.city,
     ROUND(AVG(wf.wind_speed), 2) AS avg_wind_speed,
-	ROUND(AVG(wf.wind_direction), 2) AS avg_wind_direction,
-	ROUND(AVG(wf.mean_sea_level_pressure), 2) AS avg_mean_sea_level_pressure, 
-	ROUND(AVG(wf.precipitation_24_hours), 2) AS avg_precipitation_24_hours
+    ROUND(AVG(wf.wind_direction), 2) AS avg_wind_direction,
+    ROUND(AVG(wf.mean_sea_level_pressure), 2) AS avg_mean_sea_level_pressure, 
+    ROUND(AVG(wf.precipitation_24_hours), 2) AS avg_precipitation_24_hours
 FROM Portfolio_project..temperature_france tf
 INNER JOIN 
     Portfolio_project..weather_france wf ON tf.lat = wf.lat 
@@ -240,7 +240,7 @@ ORDER BY extracted_date;
 -- Section 14: Temperature anomalies
 -- Categorize temperature values into 'High', 'Low', or 'Normal' based on deviations from average temperature
 SELECT
-	date_and_time AS date,
+    date_and_time AS date,
     temperature,
     CASE
         WHEN temperature > (SELECT AVG(temperature) FROM Portfolio_project..temperature_france) + 1 * (SELECT STDEV(temperature) FROM Portfolio_project..temperature_france) THEN 'High'
@@ -268,7 +268,7 @@ ORDER BY max_temperature DESC;
 -- Section 16: Average temperature ranking
 -- Calculate the average temperature for each location and rank them from highest to lowest
 SELECT
-	coordinates,
+    coordinates,
     ROUND(AVG(temperature), 2) AS avg_temperature,
     RANK() OVER (ORDER BY AVG(temperature) DESC) AS temperature_rank
 FROM Portfolio_project..temperature_france tf 
@@ -279,8 +279,8 @@ ORDER BY avg_temperature DESC;
 -- Section 17: Temperature difference from previous time
 -- Calculate the temperature difference from the previous time for each location
 SELECT
-	lat,
-	lon,
+    lat,
+    lon,
     date_and_time,
     temperature,
     ROUND(temperature - LAG(temperature) OVER (PARTITION BY lat, lon ORDER BY date_and_time), 2) AS temperature_difference
@@ -314,7 +314,7 @@ WHERE date_and_time BETWEEN '2024-01-16 00:00' AND '2024-01-18 00:00';
 -- Section 20: Average precipitation over past 24 hours
 -- Calculate the average precipitation accumulated over the past 24 hours for each day within a specific date range
 SELECT
-	FORMAT(CONVERT(datetime, date_and_time), 'yyyy-MM-dd') AS date,
+    FORMAT(CONVERT(datetime, date_and_time), 'yyyy-MM-dd') AS date,
     ROUND(AVG(precipitation_24_hours), 2) AS avg_precipitation_24_hours
 FROM Portfolio_project..weather_france wf 
 WHERE date_and_time BETWEEN '2024-01-20' AND '2024-01-25'
@@ -431,7 +431,7 @@ HAVING AVG(wind_speed) > 2
 -- Section 28: Average wind speed at sunrise and sunset
 -- Calculate the average wind speed during sunrise
 SELECT
-	FORMAT(sunrise, 'HH:mm') AS sunrise_time,
+    FORMAT(sunrise, 'HH:mm') AS sunrise_time,
     ROUND(AVG(wind_speed), 2) AS avg_wind_speed_at_sunrise
 FROM Portfolio_project..weather_france wf 
 GROUP BY FORMAT(sunrise, 'HH:mm')
