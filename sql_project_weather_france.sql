@@ -130,9 +130,9 @@ FROM Portfolio_project..weather_france;
 -- Section 7: Date ranges
 -- Extract date ranges for the 'temperature_france' table
 SELECT 
-	MAX(date_and_time) as max_date, 
-	MIN(date_and_time) as min_date, 
-	CASE 
+    MAX(date_and_time) as max_date, 
+    MIN(date_and_time) as min_date, 
+    CASE 
         WHEN ISDATE(MIN(date_and_time)) = 1 AND ISDATE(MAX(date_and_time)) = 1
             THEN CAST(DATEDIFF(day, MIN(date_and_time), MAX(date_and_time)) AS NVARCHAR) + ' days'
         ELSE 'Invalid date'
@@ -141,9 +141,9 @@ FROM Portfolio_project..temperature_france;
 
 -- Extract date ranges for the 'weather_france' table
 SELECT 
-	MAX(date_and_time) as max_date, 
-	MIN(date_and_time) as min_date, 
-	CASE 
+    MAX(date_and_time) as max_date, 
+    MIN(date_and_time) as min_date, 
+    CASE 
         WHEN ISDATE(MIN(date_and_time)) = 1 AND ISDATE(MAX(date_and_time)) = 1
             THEN CAST(DATEDIFF(day, MIN(date_and_time), MAX(date_and_time)) AS NVARCHAR) + ' days'
         ELSE 'Invalid date'
