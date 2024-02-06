@@ -19,7 +19,7 @@ The project is organized into the following sections:
 * Advanced SQL queries: complex queries using advanced SQL features such as window functions, CTEs, subqueries, and aggregations
 
 ## Questions answered
-The analysis is aimed to answer several questions, including – but not limited to:
+The analysis is intended to answer several questions, including – but not limited to:
 * How does temperature vary across different locations and time periods?
 * Are there any patterns in wind speed and direction?
 * Can we identify days with extreme weather conditions?
