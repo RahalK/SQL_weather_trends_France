@@ -5,8 +5,7 @@
 This SQL project focuses on analyzing weather data collected from three French cities (Paris, Lyon and Nice), combining information from from two datasets, such as latitude, longitude, 
 datetime, temperature, wind speed, and more. 
 The project includes various SQL queries and analyses to extract insights from the datasets. 
-The goal here is to gain insights into weather patterns, identify trends, and answer specific questions related to the provided datasets. It is also about understanding and analysing 
-weather patterns.
+The goal here is to gain insights into weather patterns, identify trends, and answer specific questions related to the provided datasets.
 
 ## The data
 The data comes from [Meteomatics](https://www.meteomatics.com/), a leading provider of meteorological data. Two datasets are used for this project: 'temperature_france' and 'weather_france'.
@@ -41,5 +40,5 @@ The analysis aimed to answer several questions, including – but not limited to
 
 ## Technical tools used
 * Microsoft SQL Server: used for analysing and manipulating the data
-* Microsoft SQL Server Management Studio: used for storing the datasets
+* Microsoft SQL Server Management Studio: used for storing the datasets, writing and executing SQL queries
 * Data Source: Meteomatics API for weather data
