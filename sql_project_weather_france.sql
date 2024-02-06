@@ -118,7 +118,7 @@ SET city =
     CASE
         WHEN coordinates = '(48.8566, 2.3522)' THEN 'Paris'
         WHEN coordinates = '(45.764, 4.8357)' THEN 'Lyon'
-		WHEN coordinates = '(43.7102, 7.262)' THEN 'Nice'
+	WHEN coordinates = '(43.7102, 7.262)' THEN 'Nice'
         ELSE 'Unknown'
     END;
 
@@ -452,9 +452,8 @@ SELECT
     city,
     uv_index,
     FORMAT(CAST(AVG(CAST(sunrise AS FLOAT)) AS DATETIME), 'yyyy-MM-dd HH:mm') AS average_sunrise,
-	FORMAT(CAST(AVG(CAST(sunset AS FLOAT)) AS DATETIME), 'yyyy-MM-dd HH:mm') AS average_sunset
-FROM
-    Portfolio_project..weather_france
+    FORMAT(CAST(AVG(CAST(sunset AS FLOAT)) AS DATETIME), 'yyyy-MM-dd HH:mm') AS average_sunset
+FROM Portfolio_project..weather_france
 GROUP BY CUBE (city, uv_index);
 
 
