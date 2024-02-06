@@ -9,7 +9,7 @@ The goal here is to gain insights into weather patterns, identify trends, and an
 weather patterns.
 
 ## The data
-The data comes from Meteomatics, a leading provider of meteorological data. Two datasets are used for this project: 'temperature_france' and 'weather_france'.
+The data comes from [Meteomatics](https://www.meteomatics.com/), a leading provider of meteorological data. Two datasets are used for this project: 'temperature_france' and 'weather_france'.
 The 'temperature_france' dataset contains 1299 rows and 6 columns, whereas 'weather_france' contains 1299 rows and 10 columns.
 
 ## Project structure
