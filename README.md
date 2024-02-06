@@ -13,10 +13,10 @@ The 'temperature_france' dataset contains 1299 rows and 6 columns, whereas 'weat
 
 ## Project structure
 The project is organized into the following sections:
-1.	Dataset information: a brief overview of the dataset, including the columns and data types
-2.	Data exploration: exploratory queries and analyses to understand the structure of the data
-3.	Further analysis and insights: detailed SQL queries and analyses performed to derive insights from the dataset
-4.	Advanced SQL queries: complex queries using advanced SQL features such as window functions, CTEs, subqueries, and aggregations
+* Dataset information: a brief overview of the dataset, including the columns and data types
+* Data exploration: exploratory queries and analyses to understand the structure of the data
+* Further analysis and insights: detailed SQL queries and analyses performed to derive insights from the dataset
+* Advanced SQL queries: complex queries using advanced SQL features such as window functions, CTEs, subqueries, and aggregations
 
 ## Questions answered
 The analysis aimed to answer several questions, including – but not limited to:
