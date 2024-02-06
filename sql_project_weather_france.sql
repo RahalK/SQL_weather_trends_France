@@ -214,7 +214,7 @@ INNER JOIN
                       AND tf.lon = wf.lon	
                       AND tf.date_and_time = wf.date_and_time
 GROUP BY DAY(tf.date_and_time), wf.city
-ORDER BY DAY(tf.date_and_time);
+ORDER BY day;
 
 
 -- Section 12: Max temperature by day
