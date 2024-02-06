@@ -21,8 +21,8 @@ The project is organized into the following sections:
 
 ## Questions answered
 The analysis aimed to answer several questions, including – but not limited to:
-- How does temperature vary across different locations and time periods?
-- Are there any patterns in wind speed and direction?
+* How does temperature vary across different locations and time periods?
+* Are there any patterns in wind speed and direction?
 - Can we identify days with extreme weather conditions?
 - How does UV index change with the time of day?
 
