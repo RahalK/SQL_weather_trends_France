@@ -1,5 +1,7 @@
 ![](https://github.com/RahalK/SQL_weather_trends_France/blob/main/weather_trends_france_banner.png)
 
+## Table of content
+[Overview](## Overview)
 
 ## Overview
 This SQL project focuses on analyzing weather data collected from three French cities (Paris, Lyon and Nice), combining information from from two datasets, such as latitude, longitude, 
