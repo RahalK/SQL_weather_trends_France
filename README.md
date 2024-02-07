@@ -1,4 +1,4 @@
-# Weather trends in France: an in-depth SQL analysis
+![](https://github.com/RahalK/SQL_weather_trends_France/blob/main/weather_trends_france_banner.png)
 
 
 ## Overview
