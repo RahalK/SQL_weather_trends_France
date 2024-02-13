@@ -9,11 +9,11 @@
 * [Technical tools used](#Technical-tools)
 
 ## Overview
-This SQL project focuses on analyzing weather data collected from three French cities (Paris, Lyon and Nice), combining information from from two datasets, such as latitude, longitude, datetime, temperature, wind speed, and more. 
-The project includes various SQL queries and analyses to extract insights from the datasets. 
+This SQL project focuses on analyzing weather data collected from three French cities (Paris, Lyon and Nice), combining information from from two tables, such as latitude, longitude, datetime, temperature, wind speed, and more. 
+The project includes various SQL queries and analyses to extract insights from the tables. 
 
 ## Objective
-The goal here is to gain insights into weather patterns, identify trends, and answer specific questions related to the provided datasets.
+The goal here is to gain insights into weather patterns, identify trends, and answer specific questions related to the provided tables.
 More specifically, the analysis is intended to answer several questions, including – but not limited to:
 * How does temperature vary across different locations and time periods?
 * Are there any patterns in wind speed and direction?
@@ -21,8 +21,8 @@ More specifically, the analysis is intended to answer several questions, includi
 * How does UV index change with the time of day?
 
 ## Data
-The data comes from a weather API provided by [Meteomatics](https://www.meteomatics.com/), a leading provider of meteorological data. Two datasets are used for this project: I have called them 'temperature_france' and 'weather_france'.
-The 'temperature_france' dataset contains 1299 rows and 6 columns, whereas 'weather_france' contains 1299 rows and 10 columns.
+The data comes from a weather API provided by [Meteomatics](https://www.meteomatics.com/), a leading provider of meteorological data. Two tables are used for this project: I have called them 'temperature_france' and 'weather_france'.
+The 'temperature_france' tables contains 1299 rows and 6 columns, whereas 'weather_france' contains 1299 rows and 10 columns.
 
 ## Approach
 The project is organized into the following sections:
