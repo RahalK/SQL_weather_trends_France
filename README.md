@@ -3,10 +3,10 @@
 ## Table of content
 * [Overview](#Overview)
 * [Objective](#Objective)
-* [The data](#Data)
-* [Project structure](#Approach)
-* [Skills used](#Skills)
-* [Technical tools used](#Technical-tools)
+* [Data](#Data)
+* [Approach](#Approach)
+* [Skills](#Skills)
+* [Technical tools](#Technical-tools)
 
 ## Overview
 This SQL project focuses on analyzing weather data collected from three French cities (Paris, Lyon and Nice), combining information from from two tables, such as latitude, longitude, datetime, temperature, wind speed, and more. 
