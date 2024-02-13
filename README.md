@@ -21,7 +21,7 @@ More specifically, the analysis is intended to answer several questions, includi
 * How does UV index change with the time of day?
 
 ## Data
-The data comes from a weather API provided by [Meteomatics](https://www.meteomatics.com/), a leading provider of meteorological data. Two tables are used for this project: I have called them 'temperature_france' and 'weather_france'.
+The data comes from a weather API provided by [Meteomatics](https://www.meteomatics.com/), a leading provider of meteorological data. Two tables are used for this project: 'temperature_france' and 'weather_france'.
 The 'temperature_france' tables contains 1299 rows and 6 columns, whereas 'weather_france' contains 1299 rows and 10 columns.
 
 ## Approach
