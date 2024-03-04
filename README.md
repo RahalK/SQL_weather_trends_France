@@ -1,4 +1,4 @@
-![](https://github.com/RahalK/SQL_weather_trends_France/blob/main/weather_trends_france_banner.png)
+![](https://github.com/RahalK/sql_weather_trends_france/assets/149255583/d0834a84-be73-4b5a-9ac5-afd01a036d65)
 
 ## Table of content
 * [Overview](#Overview)
